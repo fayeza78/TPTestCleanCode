@@ -12,4 +12,7 @@ public class Carte {
     public int getValeur() {
         return valeur;
     }
+    public String getEnseigne() {
+        return enseigne;
+    }
 }

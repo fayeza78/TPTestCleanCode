@@ -3,22 +3,30 @@ package org.example;
 public class Poker {
     public int calculPoints(Carte[] main) {
         for (int i = 0; i < main.length; i++) {
-            int compt = 0;
+            int comptValor = 0;
+            int comptEnseigne = 0;
 
             for (int j = 0; j < main.length; j++) {
                 if (main[i].getValeur() == main[j].getValeur()) {
-                    compt++;
+                    comptValor++;
+                }
+                if (main[i].getEnseigne() == main[j].getEnseigne()) {
+                    comptEnseigne++;
                 }
             }
+            if (comptEnseigne == 5) {
+                return 45;
+            }
 
-            if (compt == 5) {
+            if (comptValor == 5) {
                 return 40;
             }
 
-            if (compt == 3) {
+            if (comptValor == 3) {
                 return 30;
             }
         }
+
 
         int max = 0;
 
