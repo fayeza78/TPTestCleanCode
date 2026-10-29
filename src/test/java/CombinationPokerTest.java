@@ -14,7 +14,7 @@ public class CombinationPokerTest {
                 new Carte(5, "Carreau"),
                 new Carte(7, "Trèfle"),
                 new Carte(9, "Pique"),
-                new Carte(9, "Cœur")
+                new Carte(11, "Cœur")
         };
 
         assertEquals(11, poker.calculPoints(main));
