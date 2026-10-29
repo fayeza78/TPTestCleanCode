@@ -1,0 +1,27 @@
+import org.example.Carte;
+import org.example.Poker;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CombinationPokerTest {
+    @Test
+    void shouldReturnMaxValorBecause0Combination() {
+        Poker poker = new Poker();
+
+        Carte[] main = {
+                new Carte(2, "Cœur"),
+                new Carte(5, "Carreau"),
+                new Carte(7, "Trèfle"),
+                new Carte(9, "Pique"),
+                new Carte(9, "Cœur")
+        };
+
+        assertEquals(11, poker.calculPoints(main));
+    }
+
+    @Test
+    void shouldReturnBrelanCombination() {
+
+    }
+}
