@@ -35,4 +35,19 @@ public class CombinationPokerTest {
         assertEquals(30, poker.calculPoints(main));
     }
 
+    @Test
+    void shouldReturn40BecauseSuiteCombination() {
+        Poker poker = new Poker();
+
+        Carte[] main = {
+                new Carte(5, "Cœur"),
+                new Carte(5, "Carreau"),
+                new Carte(5, "Trèfle"),
+                new Carte(5, "Pique"),
+                new Carte(5, "Cœur")
+        };
+
+        assertEquals(40, poker.calculPoints(main));
+    }
+
 }
