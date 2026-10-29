@@ -21,7 +21,18 @@ public class CombinationPokerTest {
     }
 
     @Test
-    void shouldReturnBrelanCombination() {
+    void shouldReturn30BecauseBrelanCombination() {
+        Poker poker = new Poker();
 
+        Carte[] main = {
+                new Carte(5, "Cœur"),
+                new Carte(5, "Carreau"),
+                new Carte(5, "Trèfle"),
+                new Carte(9, "Pique"),
+                new Carte(11, "Cœur")
+        };
+
+        assertEquals(30, poker.calculPoints(main));
     }
+
 }
